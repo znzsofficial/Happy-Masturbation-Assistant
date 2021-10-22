@@ -1,0 +1,11 @@
+appname="快乐自慰小助手"
+appver="1.6.1"
+appcode="14"
+appsdk="25"
+packagename="com.znzs.chong"
+app_key=""
+debugmode=false
+user_permission={
+  "VIBRATE",
+  "INTERNET"
+}
