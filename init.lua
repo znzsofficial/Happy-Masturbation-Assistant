@@ -1,11 +1,11 @@
 appname="快乐自慰小助手"
-appver="1.6.1"
-appcode="14"
-appsdk="25"
+appver="2.0"
+appcode="16"
 packagename="com.znzs.chong"
-app_key=""
+theme="Theme"
+welcome_time="0"
 debugmode=false
+enableExtendedOutputSupport=true
+enableDialogLog=true
 user_permission={
-  "VIBRATE",
-  "INTERNET"
 }

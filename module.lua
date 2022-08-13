@@ -8,8 +8,6 @@ activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGA
 
 
 
-
-
 function 水珠动画(控件,时间)
   import "android.animation.ObjectAnimator"
   ObjectAnimator().ofFloat(控件,"scaleX",{1,.8,1.3,.9,1}).setDuration(时间).start()
@@ -113,38 +111,9 @@ end
 
 
 function 提示(内容)
-  junyang=
-  {
-    LinearLayout;
-    id="toastb";
-    {
-      CardView;--卡片控件
-      layout_margin='';--卡片边距
-      layout_gravity='horizontal';--重力属性
-      layout_marginBottom='10dp';--布局底距
-      elevation='5dp';--阴影属性
-      layout_width='wrap';--卡片宽度
-      CardBackgroundColor='#FF3f51b5';--卡片背景颜色
-      layout_height='wrap';--卡片高度
-      radius='20dp';--卡片圆角
-      {
-        TextView;--文字控件
-        background="#ff3f51b5";--背景颜色
-        padding="8dp";
-        textSize="15sp";--文字大小
-        TextColor="#ffffffff";--文字颜色
-        layout_width="fill";--卡片宽度
-        layout_height="fill";--卡片高度
-        gravity="center";--重力
-        text="提示出错";--显示文字
-        id="text_ts";
-      };
-    };
-  };
-  local toast=Toast.makeText(activity,"内容",Toast.LENGTH_SHORT).setView(loadlayout(junyang))
-  toast.setGravity(Gravity.BOTTOM,0, 0)
-  text_ts.Text=tostring(内容)
-  toast.show()
+  local anchor=activity.findViewById(android.R.id.content)
+  Snackbar.make(anchor, 内容, Snackbar.LENGTH_LONG).show()
+  --LENGTH_SHORT     2s
+  --LENGTH_LONG      3.5s
 end
-
 

@@ -1,160 +1,90 @@
 {
-  LinearLayout;--线性布局
-  Orientation='vertical';--布局方向
-  layout_width='fill';--布局宽度
-  layout_height='fill';--布局高
-  BackgroundDrawable=LuaDrawable(function(canvas,paint,draw)
-    canvas.drawColor(0xffffffff)
-    paint.setColor(0xff2196F3)
-    canvas.drawCircle(1200,-75,1000,paint)
-    paint.setColor(0xff536DFE)
-    canvas.drawCircle(200,-10,600,paint)
-  end);
-  Gravity="center";
-{
-CardView;
-layout_height="35%w";
-id="card0";
-radius="120dp";
-layout_width="35%w";
-CardElevation="5dp";
-backgroundColor="0xffFF4081";
-layout_marginBottom="20dp";
-{
-TextView;
-layout_gravity="center";
-id="times";
-layout_margin="20dp";
-textSize="12sp";
-textColor="0xffffffff";
-};
-};
-{
-CardView;
-layout_height="10%w";
-layout_margin="10dp";
-id="clean";
-layout_width="25%w";
-CardElevation="5dp";
-backgroundColor="0xFF4477E0";
-radius="10dp";
-{
-TextView;
-text="重置";
-layout_gravity="center";
-textColor="0xffffffff";
-};
-};
-{
-CardView;
-layout_height="10%w";
-id="adv";
-radius="10dp";
-layout_width="25%w";
-CardElevation="5dp";
-backgroundColor="0xFF4477E0";
-layout_marginBottom="10dp";
-{
-TextView;
-gravity="center";
-text="高级手冲选项";
-layout_gravity="center";
-textColor="0xffffffff";
-};
-};
-{
-CardView;
-layout_height="10%w";
-id="diy";
-layout_width="25%w";
-CardElevation="5dp";
-backgroundColor="0xFFE91E63";
-radius="10dp";
-{
-TextView;
-gravity="center";
-text="自定义震动";
-layout_gravity="center";
-textColor="0xffffffff";
-};
-};
-{
-TextView;
-layout_height="3px";
-layout_gravity="center";
-layout_width="80%w";
-backgroundColor="#bebebe";
-layout_margin="10dp";
-};
-{
-LuaWebView;
-layout_width="0dp";
-layout_height="0dp";
-id="web";
-};
-{
-TextView;
-text="手冲计时";
-layout_margin="8dp";
-textColor="0xff565656";
-layout_gravity="center";
-layout_marginBottom="10dp";
-};
-{
-TextView;
-id="cimes";
-layout_gravity="center";
-textColor="0xff565656";
-};
-{
-CardView;
-layout_height="10%w";
-layout_margin="10dp";
-id="std";
-layout_width="25%w";
-CardElevation="5dp";
-backgroundColor="0xFFE91E63";
-radius="10dp";
-{
-TextView;
-text="开始";
-gravity="center";
-layout_gravity="center";
-textColor="0xffffffff";
-};
-};
-{
-CardView;
-layout_height="10%w";
-layout_margin="10dp";
-id="stt";
-layout_width="25%w";
-CardElevation="5dp";
-backgroundColor="0xFFE91E63";
-radius="10dp";
-{
-TextView;
-text="结束";
-gravity="center";
-layout_gravity="center";
-textColor="0xffffffff";
-};
-};
-{
-CardView;
-layout_height="10%w";
-layout_margin="10dp";
-id="stu";
-layout_width="25%w";
-CardElevation="5dp";
-backgroundColor="0xFFE91E63";
-radius="10dp";
-{
-TextView;
-text="提交";
-gravity="center";
-layout_gravity="center";
-textColor="0xffffffff";
-};
-};
-};
+  CoordinatorLayout;
+  layout_width="fill";
+  layout_height="fill";
+  {
+    LinearLayoutCompat;--线性布局
+    Orientation='vertical';--布局方向
+    layout_width='fill';--布局宽度
+    layout_height='fill';--布局高
+    Gravity="center";
+    {
+      MaterialCardView;
+      layout_height="35%w";
+      id="card0";
+      radius="120dp";
+      layout_width="35%w";
+      CardElevation="5dp";
+      layout_marginBottom="20dp";
+      {
+        AppCompatTextView;
+        layout_gravity="center";
+        id="times";
+        layout_margin="20dp";
+        textSize="12sp";
+      };
+    };
+    {
+      MaterialButton;
+      layout_height="10%w";
+      layout_margin="10dp";
+      id="clean";
+      layout_width="25%w";
+      text="重置";
+    };
+    {
+      AppCompatTextView;
+      layout_height="3px";
+      layout_gravity="center";
+      layout_width="80%w";
+      backgroundColor="#bebebe";
+      layout_margin="10dp";
+    };
+    {
+      AppCompatTextView;
+      text="手冲计时";
+      layout_margin="8dp";
+      textColor="0xff565656";
+      layout_gravity="center";
+      layout_marginBottom="10dp";
+    };
+    {
+      AppCompatTextView;
+      id="chronoGraph";
+      layout_gravity="center";
+      textColor="0xff565656";
+    };
+    {
+      MaterialButton;
+      layout_height="10%w";
+      layout_margin="10dp";
+      id="startButton";
+      layout_width="25%w";
+        text="开始";
+    };
+    {
+      MaterialButton;
+      layout_height="10%w";
+      layout_margin="10dp";
+      id="stop";
+      layout_width="25%w";
+        text="暂停";
+    };
+    {
+      MaterialButton;
+      layout_height="10%w";
+      layout_margin="10dp";
+      id="endButton";
+      layout_width="25%w";
+        text="结束";
+    };
+    {
+      MaterialButton;
+      layout_height="10%w";
+      layout_margin="10dp";
+      id="submitButton";
+      layout_width="25%w";
+        text="提交";
+    };
+  };
+}
