@@ -1,11 +1,12 @@
-appname="快乐自慰小助手"
-appver="2.0"
-appcode="16"
-packagename="com.znzs.chong"
-theme="Theme"
+appname="求导小助手"
+appver="1.7.6"
+appcode="23"
+packagename="github.znzsofficial.derivate"
+theme="Theme_Material_NoActionBar"
 welcome_time="0"
-debugmode=false
-enableExtendedOutputSupport=true
-enableDialogLog=true
+debugmode=true
+enableExtendedOutputSupport=false
+enableDialogLog=false
 user_permission={
+  "VIBRATE"
 }
